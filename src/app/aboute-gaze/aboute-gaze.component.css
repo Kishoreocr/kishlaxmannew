@@ -19,8 +19,14 @@
 }
 p.content-style{
     font-size: 15px;
-    line-height: 28px;
+    line-height: 26px;
     word-wrap: nowrap;
     text-align: justify;
+}
+.page-heading-1{
+    font-size: 36px;
+    padding: 15px 0px 0px 0px;
+    color: #4e4d4d;
+    margin:0px;
 }
 
