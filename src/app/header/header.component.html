@@ -133,7 +133,7 @@ position: relative;">
           <img src="../../assets/images/eGAZE_logo1.png" alt="eGAZE" width="175">
         </a>
       </div>
-      <div class="social">
+      <!-- <div class="social">
         <ul>
           <li>
             <a href="https://www.youtube.com/channel/UCXWgWp696nA1LiOG_nYr5oA?view_as=subscriber" target="_blank">
@@ -155,31 +155,41 @@ position: relative;">
           </li>
 
         </ul>
-      </div>
-      <div class="phone" style="font-size: 16px;">
-        <a *ngIf="!mobile" href="tel: +917045942225" target="_blank"><i class="fa fa-phone" aria-hidden="true"></i> &nbsp;&nbsp;<i class="fa fa-whatsapp" aria-hidden="true"></i>&nbsp;(+91) 70459 42225</a>
-        <a *ngIf="mobile" href="https://api.whatsapp.com/send?phone=+91-7045942225" target="_blank"><i class="fa fa-phone" aria-hidden="true"></i> (+91) 70459 42225</a>
-      </div>
+      </div> -->
+
       <div class="logins">
-        <ul *ngIf="flag">
-          <li>
-            <a>{{user.email}}</a>
-          </li>
-          <li>
-            <a (click)="logout()" style="cursor:pointer">Logout</a>
-          </li>
+          <ul *ngIf="flag">
+            <li>
+              <a>{{user.email}}</a>
+            </li>
+            <li>
+              <a (click)="logout()" style="cursor:pointer">Logout</a>
+            </li>
+  
+          </ul>
+  
+          <ul *ngIf="!flag">
+            <li>
+              <a routerLink="/loginform" routerLinkActive="activeClss" class="login-style">Login</a>
+            </li>
+            <li>
+              <a routerLink="/registerform" routerLinkActive="activeClss" class="login-style">Registration</a>
+            </li>
+          </ul>
+        </div>
 
-        </ul>
-
-        <ul *ngIf="!flag">
-          <li>
-            <a routerLink="/loginform" routerLinkActive="activeClss"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a>
-          </li>
-          <li>
-            <a routerLink="/registerform" routerLinkActive="activeClss"><i class="fa fa-user-plus" aria-hidden="true"></i> Registration</a>
-          </li>
-        </ul>
-      </div>
+        <div class="phone" style="font-size: 16px;">
+        
+            <a *ngIf="!mobile" href="tel: +917045942225" target="_blank">
+              <i class="fa fa-phone whatsapp-number" aria-hidden="true"></i> 
+              <i class="fa fa-whatsapp whatsapp-number" aria-hidden="true"></i>
+              (+91) 70459 42225
+            </a>
+            <a *ngIf="mobile" href="https://api.whatsapp.com/send?phone=+91-7045942225" target="_blank">
+              <i class="fa fa-phone whatsapp-number" aria-hidden="true"></i> (+91) 70459 42225
+            </a>
+        
+          </div>
     </div>
   </div>
   <div class="nav">
@@ -188,16 +198,17 @@ position: relative;">
         <div id="nav">
           <ul>
             <li>
-              <a routerLink="/home" routerLinkActive="activeClss" [class.activeClassLink] = "currentURL=='/home'"><i class="fa fa-home" aria-hidden="true"></i>
+              <a routerLink="/home" routerLinkActive="activeClss" [class.activeClassLink] = "currentURL=='/home'">
+                <i class="fa fa-home" aria-hidden="true"></i> Home
 </a>
             </li>
 
             <li>
-              <a [class.activeClassLink] = "currentURL=='/package-choose'">Services</a>
+              <a [class.activeClassLink] = "currentURL=='/package-choose'">
+                <i class="fa fa-cogs"></i> 
+                Services</a>
               <ul>
-                <!-- <li>
-                  <a routerLink="/property-monitoring" routerLinkActive="activeClss">Property Monitoring</a>
-                </li> -->
+          
                 <li>
                   <a routerLink="/package-choose" routerLinkActive="activeClss">Packages</a>
                 </li>
@@ -229,21 +240,21 @@ position: relative;">
             </li>
 
             <li >
-              <a routerLink="/articles" routerLinkActive="activeClss" [class.activeClassLink] = "currentURL=='/articles'">Articles</a>
+              <a routerLink="/articles" routerLinkActive="activeClss" [class.activeClassLink] = "currentURL=='/articles'"><i class="fa fa-newspaper-o"></i> Articles</a>
             </li>
             <li>
-              <a routerLink="/testimonials" routerLinkActive="activeClss" [class.activeClassLink] = "currentURL=='/testimonials'">Testimonials</a>
+              <a routerLink="/testimonials" routerLinkActive="activeClss" [class.activeClassLink] = "currentURL=='/testimonials'"><i class="fa fa-users"></i> Testimonials</a>
             </li>
             <li >
-              <a routerLink="/contactus" routerLinkActive="activeClss" [class.activeClassLink] = "currentURL=='/contactus'">Contact</a>
+              <a routerLink="/contactus" routerLinkActive="activeClss" [class.activeClassLink] = "currentURL=='/contactus'"><i class="fa fa-phone"></i> Contact</a>
             </li>
             <li >
-              <a routerLink="/help" routerLinkActive="activeClss" [class.activeClassLink] = "currentURL=='/help'">Help</a>
+              <a routerLink="/help" routerLinkActive="activeClss" [class.activeClassLink] = "currentURL=='/help'"><i class="fa fa-question"></i> Help</a>
             </li>
 
             <li >
               <a [class.activeClassLink] = "currentURL=='/terms-conditions' || currentURL=='/privacy-policy'">  <!--|| currentURL==='/disclaimer' -->
-                Policies</a>
+                <i class="fa fa-newspaper-o"></i> Policies</a>
               <ul>
                 <li>
                   <a routerLink="/terms-conditions" routerLinkActive="activeClss" >Terms &amp; Conditions</a>
@@ -262,7 +273,7 @@ position: relative;">
 
 
             <li *ngIf="!flag">
-              <a routerLink="/blog" routerLinkActive="activeClss" [class.activeClassLink] = "currentURL=='/blog'">Blog</a>
+              <a routerLink="/blog" routerLinkActive="activeClss" [class.activeClassLink] = "currentURL=='/blog'"><i class="fa fa-blogger-b"></i> Blog</a>
             </li>
             <li *ngIf="flag">
               <a *ngIf="this.user.role==='admin'" routerLink="/admindashboard" routerLinkActive="activeClss" [class.activeClassLink] = "currentURL=='/admindashboard'">Dashboard</a>
