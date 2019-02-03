@@ -55,11 +55,11 @@ background: url(../../assets/images/menu_top_header.png) no-repeat;
 
 /* Nav
 ================================================== */
-#nav { font-size: 18px; font-weight: 600; line-height: 42px; text-align: center;  }
+#nav { font-size: 18px; font-weight: 600; line-height: 42px; text-align: left;  }
 #nav > ul { padding: 0; margin: 0;  }
-#nav > ul > li { position:relative; list-style:none; display:inline-block; margin: 0 25px; }
-#nav > ul > li:first-child { margin: 0 25px 0 0; }
-#nav > ul > li:last-child { margin: 0 0 0 25px; }
+#nav > ul > li { position:relative; list-style:none; display:inline-block; margin: 0 25px 0px 0px; }
+/* #nav > ul > li:first-child { margin: 0 25px 0 0; }
+#nav > ul > li:last-child { margin: 0 0 0 25px; } */
 #nav > ul > li > a {text-decoration: none; font-weight:600; cursor: pointer}
 #nav > ul > li > a, #nav > ul > li > a:link, #nav > ul > li > a:visited { display:inline-block; line-height:30px; color:#ffffff; }
 #nav > ul > li > a:hover, #nav > ul > li > a:active { color:#ffffff; }
@@ -1056,4 +1056,9 @@ a.logo-style{
     font-size: 15px;
 	border: 2px solid #fff;
 	margin:0px 2px;
+}
+
+.top-menu-icons{
+	opacity: 0.5;
+    font-size: 16px;
 }

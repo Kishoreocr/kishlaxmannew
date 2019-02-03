@@ -199,13 +199,13 @@ position: relative;">
           <ul>
             <li>
               <a routerLink="/home" routerLinkActive="activeClss" [class.activeClassLink] = "currentURL=='/home'">
-                <i class="fa fa-home" aria-hidden="true"></i> Home
+                <i class="fa fa-home top-menu-icons" aria-hidden="true"></i> Home
 </a>
             </li>
 
             <li>
               <a [class.activeClassLink] = "currentURL=='/package-choose'">
-                <i class="fa fa-cogs"></i> 
+                <i class="fa fa-cogs top-menu-icons top-menu-icons"></i> 
                 Services</a>
               <ul>
           
@@ -227,7 +227,8 @@ position: relative;">
               </ul>
             </li> -->
             <li>
-              <a [class.activeClassLink] = "currentURL=='/abouteGAZE' || currentURL=='/whyeGAZE'">About</a>
+              <a [class.activeClassLink] = "currentURL=='/abouteGAZE' || currentURL=='/whyeGAZE'">
+                <i class="fa fa-user top-menu-icons"></i> About</a>
               <ul>
                 <li>
                   <a routerLink="/abouteGAZE" routerLinkActive="activeClss">About eGAZE</a>
@@ -240,21 +241,21 @@ position: relative;">
             </li>
 
             <li >
-              <a routerLink="/articles" routerLinkActive="activeClss" [class.activeClassLink] = "currentURL=='/articles'"><i class="fa fa-newspaper-o"></i> Articles</a>
+              <a routerLink="/articles" routerLinkActive="activeClss" [class.activeClassLink] = "currentURL=='/articles'"><i class="fa fa-newspaper-o top-menu-icons"></i> Articles</a>
             </li>
             <li>
-              <a routerLink="/testimonials" routerLinkActive="activeClss" [class.activeClassLink] = "currentURL=='/testimonials'"><i class="fa fa-users"></i> Testimonials</a>
+              <a routerLink="/testimonials" routerLinkActive="activeClss" [class.activeClassLink] = "currentURL=='/testimonials'"><i class="fa fa-users top-menu-icons"></i> Testimonials</a>
             </li>
             <li >
-              <a routerLink="/contactus" routerLinkActive="activeClss" [class.activeClassLink] = "currentURL=='/contactus'"><i class="fa fa-phone"></i> Contact</a>
+              <a routerLink="/contactus" routerLinkActive="activeClss" [class.activeClassLink] = "currentURL=='/contactus'"><i class="fa fa-phone top-menu-icons"></i> Contact</a>
             </li>
             <li >
-              <a routerLink="/help" routerLinkActive="activeClss" [class.activeClassLink] = "currentURL=='/help'"><i class="fa fa-question"></i> Help</a>
+              <a routerLink="/help" routerLinkActive="activeClss" [class.activeClassLink] = "currentURL=='/help'"><i class="fa fa-question top-menu-icons"></i> Help</a>
             </li>
 
             <li >
               <a [class.activeClassLink] = "currentURL=='/terms-conditions' || currentURL=='/privacy-policy'">  <!--|| currentURL==='/disclaimer' -->
-                <i class="fa fa-newspaper-o"></i> Policies</a>
+                <i class="fa fa-newspaper-o top-menu-icons"></i> Policies</a>
               <ul>
                 <li>
                   <a routerLink="/terms-conditions" routerLinkActive="activeClss" >Terms &amp; Conditions</a>
@@ -273,7 +274,10 @@ position: relative;">
 
 
             <li *ngIf="!flag">
-              <a routerLink="/blog" routerLinkActive="activeClss" [class.activeClassLink] = "currentURL=='/blog'"><i class="fa fa-blogger-b"></i> Blog</a>
+              <a routerLink="/blog" routerLinkActive="activeClss" [class.activeClassLink] = "currentURL=='/blog'">
+                <i>
+                <img src="../../assets/images/blogger-icon.png" width="16px;" style="margin-top: -5px;"/>
+              </i> Blog</a>
             </li>
             <li *ngIf="flag">
               <a *ngIf="this.user.role==='admin'" routerLink="/admindashboard" routerLinkActive="activeClss" [class.activeClassLink] = "currentURL=='/admindashboard'">Dashboard</a>
